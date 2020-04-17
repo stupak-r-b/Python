@@ -1,0 +1,692 @@
+# make a list called sandwich_orders and fill it with the names of various sandwiches
+sandwich_orders = ["egg sandwich", "fish sandwich", "fried egg sandwich", "grilled cheese sandwich"
+                   "grilled chicken sandwiches", "ham sandwich", "ice cream sandwich"]
+finished_sandwiches = []
+
+# loop through the list of sandwich orders and print a message for each order
+while sandwich_orders:
+    order = sandwich_orders.pop()
+    print(f"I made your {order}.")
+    finished_sandwiches.append(order)
+
+sandwich_orders = ["egg sandwich", "pastrami", "fish sandwich", "fried egg sandwich", "pastrami", "grilled cheese sandwich"
+                   "grilled chicken sandwiches", "ham sandwich", "pastrami", "ice cream sandwich"]
+
+# use a while loop to remove all occurrences of 'pastrami' from sandwich_orders
+while "pastrami" in sandwich_orders:
+    sandwich_orders.remove("pastrami")
+print(sandwich_orders)
+
+# without a loop
+sandwich_orders = ["egg sandwich", "pastrami", "fish sandwich", "fried egg sandwich", "pastrami", "grilled cheese sandwich"
+                   "grilled chicken sandwiches", "ham sandwich", "pastrami", "ice cream sandwich"]
+
+sandwich_orders = [sandwich for sandwich in sandwich_orders if sandwich != "pastrami"]
+print(sandwich_orders)
+# write a function called display_message() that prints one sentence
+def display_message():
+    """This function prints one sentence"""
+    print("\nIn this chapter we learnd how to write functions.")
+
+display_message()
+# write a function that accepts one paramete. The function should print a message
+def favorite_book(favorite_book):
+    """This funvtion prints one sentence and accepts one parameter"""
+    print(f"One of my favorite books is {favorite_book}.")
+
+favorite_book("Alice in Wonderland")
+# write a function that accepts a size and the thext of a message that should be printed on the shirt
+def make_shirt(size, message):
+    return f"You choose {size} size, and the message on the shirt is '{message}'"
+
+print(make_shirt(size="L", message="ReEx"))
+# write a function that accepts the name of a city and its country
+def describe_city(city, country="Spain"):
+    print(f"{city} is in {country}")
+
+# call function for three different cities
+describe_city("Madrid")
+describe_city("Valencia")
+describe_city(city="Porto", country="Portugal")
+# without any typo
+message = "Hello Worldd" 	# => Hello World
+
+# make a typo somewhere in the line and run the program again
+another_message = "Hello World   #=> Syntax Error
+
+# store a message in a variable, and then print that
+message = "Hello everyone :D"   # => Hello everyone :D
+
+# store a message in a variable, and print that message
+message = "Hello everyone :D"   
+print(message)						# => Hello everyone :D
+
+# change the value of your variavle to a new massage, and print the new message
+massage = "I'm so good ;=)"        
+print(message)                      # => "I'm so good ;=)"
+# store a person's name in a variable, and print a message to that person
+some_body = "Eric"
+print(f"Hello {some_body}, would you like to learn some Python today?")   # =>
+# => Hello Eric, would you like to learn some Python today?
+
+# store a person's name in a variabe, and then print that person's name in lovercase, uppercase and titlecase
+some_body = "Eric Smith"
+
+print(some_body.lower())     # =>  eric smith
+print(some_body.upper())	 # =>  ERIC SMITH
+print(some_body.title())	 # =>  Eric Smith
+
+# print the quote and the name of its author.
+famous_person = "Albert Einstein"
+quote = '"A person who never made a mistake never tried anything new."'
+
+print(famous_person + " once said " + quote)   # => Albert Einstein once said, "A person who never made a mistake never tried anything new."
+
+# creating values for the author and quote
+famous_person = "Albert Einstein"
+quote = '"A person who never made a mistake never tried anything new."'
+
+# compose your message and store it in a new variable called message
+message = famous_person + " once said " + quote
+print(message)
+# store a person's name, and include some whitespace sharacters at the beginning and end of the name
+name_user = "\tSome Body\n"
+
+# print the name once, so the whitespace around the nameis displayed
+print(name_user)
+
+# print the name using eash of the three stripping functions, lstrip(), rstrip(), strip()
+print(name_user.lstrip())
+print(name_user.rstrip())
+print(name_user.strip())
+
+# store the names of a few of your friends in a list called names
+names = ["Alex", "Stuard", "Brian", "James"]
+
+# print each person's name by accessing each element in the list, one at a time
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[3])
+
+# list of my guests
+guests = ["Sarah", "Jozeph", "Mike", "Alex", "Garry"]
+
+# use your list to print a series of statements
+print(f"Dear {guests[0]} you're invited to be with us for lovely lunch.")
+print(f"Dear {guests[1]} you're invited to be with us for lovely lunch.")
+print(f"Dear {guests[2]} you're invited to be with us for lovely lunch.")
+print(f"Dear {guests[3]} you're invited to be with us for lovely lunch.")
+print(f"Dear {guests[4]} you're invited to be with us for lovely lunch.")
+
+# my guests
+guests = ["Sarah", "Jozeph", "Mike", "Alex", "Garry"]
+
+# replace the name of the guest who can't make the dinner with the name of the new person you are inviting
+guests[0] = guests[0].replace("Sarah", "Deny")
+
+# use insert() to add one new guest to the beginning of your list
+guests.insert(0, "Mary")
+
+# use insert() to add one new guest to the middle of your list
+guests.insert(3, "Kate")
+
+# use append() to add one new guest to the end of your list
+guests.append("Donald")
+
+# Mike can't come tomorrow
+guests.remove("Mike")
+
+# ...and Mary can't come tomorrow
+del guests[0]
+
+# print a new set of invitation messages, one for each person in your list
+for guest in guests:
+    print("\n\nInvitation Messages for Dinner\n")
+    print(f"Dear {guest} you are most cordially invited to be our guest at thedinner party we have arranged on 28.02")
+    print("It will be great having you among us!")
+# store the locations in a list. Make sure the list is not in alphabetical order
+countries = ["Spain", "USA", "Norway", "Australia", "New Zealand"]
+
+# print list in it's original order
+print("1. " + str(countries))
+
+# use sorted() to print your list in alphavetical order whitout modifying the acttual list
+print("2. " + str(sorted(countries)))
+
+# show that your list is stil in it's original order
+print("3. " + str(countries))
+
+# use sorted() to print your list in reverse alphabetical order without changing the order of the original list
+print("4. " + str(sorted(countries, reverse = True)))
+
+# show that your list is stil in it's original order
+print("5. " + str(countries))
+
+# use reverse() to change the order of your list
+countries.reverse()
+print("6. " + str(countries))
+
+# use revers() to change the order of your list again
+# use reverse() to change the order of your list
+countries.reverse()
+print("7. " + str(countries))
+
+# sort the list in alphabetically using sort()
+countries.sort(reverse=True)
+print("8. " + str(countries))
+
+countries = ["Spain", "USA", "Norway", "Australia", "New Zealand"]
+
+# use len() to print a message indicating the number fo people you are inviting to dinner
+lenth_list = len(countries)
+print(f"Was invited {lenth_list} peple")
+
+# store pizza names in a list, and then use a for loop to print the name of each pizza
+pizzas = ["Pizza with black olives and pepperoni",
+          "Pizza with capers and pecorino sardo",
+          "Cauliflower crust pizza with pest and tomatoes"]
+
+for pizza in pizzas:
+    print(f"One of my favorite pizza is {pizza}")
+
+# use a for loop to print the numbers from 1 to 20, inclusive.
+for number in range(1, 21):
+    print(number)
+
+# make a list of the numbers from one to one million
+list_of_num = [num for num in range(1, 1_000_001)]
+
+# use a for loop to print the numbers
+for num in list_of_num:
+    print(num)
+
+# make a list of the numbers from one to one millon
+list_of_num = [num for num in range(1, 1_000_001)]
+
+# use min() and max() to make sure your list actually starts at one and ends at one millon
+smallest = min(list_of_num)
+largest = max(list_of_num)
+print(smallest, largest)
+
+# use sum() funtion to see how quickly Python can add a milion numbers
+sum_of_million = sum(list_of_num)
+print(sum_of_million)
+
+# use the third argument of the range() function to make a list of the odd numbers from 1 to 20.
+odd_nums = [num for num in range(1, 20, 2)]
+
+# use a for loop to print each number
+for num in odd_nums:
+    print(num)
+
+# make a list of the multiples of 3 from 3 to 30
+nums = [num for num in range(3, 30, 3)]
+
+# use a for loop to print the numbers in your list
+for num in nums:
+    print(num)
+
+# make a list of the first 20 cubes
+numbers = [num**3 for num in range(1, 20)]
+
+# use a for loop to print out the value of each cube
+for num in numbers:
+    print(num)
+
+my_favorite = ['pizza', 'falafel', 'carrot cake', 'cannoli', 'ice cream']
+
+# use a slice to print the first three items from that list
+print(f"The first thre items in the list are: {my_favorite[:3]}")
+
+# use a slice to print three items from the middle of the list
+print(f"Three items from the middle of the list are: {my_favorite[1:4]}")
+
+# use a slice to print the last three items in the list
+print(f"The last three items in the list are: {my_favorite[-3:]}")
+
+pizzas = ["Pizza with black olives and pepperoni",
+          "Pizza with capers and pecorino sardo",
+          "Cauliflower crust pizza with pest and tomatoes"]
+
+# make a copy of the list of pizzas
+friend_pizzas = pizzas[:]
+
+# add new pizza to the original list
+pizzas.append("Pizza with pepperoni and pecorino sardo")
+
+# add new pizza to the list friend_pizzas
+friend_pizzas.append("Pizza with sweet and hot peppers")
+
+# prove that you have two separate lists
+print("My favorite pizzas are: ")
+for pizza in pizzas:
+    print(pizza)
+
+print("\nMy friend's favorite pizzas are: ")
+for pizza in friend_pizzas:
+    print(pizza)
+
+# create a tuple of 5 elements
+menue = ("Caril de Frango", "Karahi Chicken", "Chicken Jalfrezi",
+         "Chicken Vindaloo", "Chicken Xacuti")
+
+# use a for loop to print each food the restaurant offers
+print("Dishes from the menu: ")
+for dish in menue:
+    print(f"- {dish}")
+
+# try to modify one of the items, and make sure that Python rejects the change
+#menue[0] = "Mango Chicken"
+
+# add a block of code that rewrites the ruple
+new_menue = ("Mango Chicken", "Chicken Curry") + menue[2:]
+
+print("\nDishes from the new menu: ")
+for dish in new_menue:
+    print(f"- {dish}")
+
+# write a series of conditional tests
+
+# volvo
+car = 'volvo'
+print("Is car =='volvo'? I predict True.")
+print(car == 'volvo')
+
+print("\nIs car == 'audi'? I predict False.")
+print(car == 'audi')
+
+# audi
+car = 'audi'
+print("Is car =='audi'? I predict True.")
+print(car == 'audi')
+
+print("\nIs car == 'volvo'? I predict False.")
+print(car == 'volvo')
+
+# nissan
+car = 'nissan'
+print("Is car =='volvo'? I predict False.")
+print(car == 'volvo')
+
+print("\nIs car == 'nissan'? I predict True.")
+print(car == 'nissan')
+
+# mercedes
+car = 'mercedes'
+print("Is car =='mercedes'? I predict True.")
+print(car == 'mercedes')
+
+print("\nIs car == 'audi'? I predict False.")
+print(car == 'audi')
+
+# lamborgini
+car = 'lamborgini'
+print("Is car =='lamborgini'? I predict True.")
+print(car == 'lamborgini')
+
+print("\nIs car == 'a tank'? I predict False.")
+print(car == 'a tank')
+
+# verification of conditions
+
+name = "Michael"
+
+if name == "Michael":
+    print(f"Yes, his name is {name}")
+if name == "michael".title():
+    print(f"Yes, his name is {name}")
+
+
+name = "ronald"
+
+if name != "Michael":
+    print(f"His name isn't Michael, his name is {name.title()}")
+if name == "Ronald".lower():
+    print(f"His name is {name.title()}")
+
+number = 44
+if 23 < number < 45:
+    print("True")
+if number > 35 and number > 40:
+    print("True")
+
+nums = [1, 2, 3, 4, 5, 5, 6, 7]
+if 34 in nums:
+    print("True")
+else:
+    print("False")
+
+alien_color = "green"
+score = 0
+
+# if elien_color is green, the player earns 5 points
+if alien_color == "green":
+    score += 5
+    print("You earned 5 points.")
+else:
+    print("You earned 0 points.")
+elien_color = "yellow"
+score = 0
+
+# if elien_color is green, the player earns 5 points
+if elien_color == "green":
+    score += 5
+    print("You earned 5 points.")
+else:
+    score += 10
+    print("You earned 10 points.")
+
+
+# if elien_color is yellow, the player earns 10 points
+if elien_color == "yellow":
+    score += 10
+    print("You earned 10 points")
+else:
+    score += 5
+    print("You earned 5 points")
+
+elien_color = "yellow"
+score = 0
+
+# if the alien is green, print a message that the player earned 5 points
+if elien_color == "green":
+    score += 5
+    print("You earned 5 points.")
+
+# if the alien is yellow, print a message that the player earned 10 points.
+elif elien_color == "yellow":
+    score += 10
+    print("You earned 10 points.")
+
+# if the alien is red, print a message that the player earned 15 prints.
+else:
+    score += 15
+    print("You earned 15 points.")
+
+# set a value for the variable age
+age = 35
+
+# if the person is less than 2 years old, print a message that the person is a baby.
+if age < 2:
+    print("You're still baby.")
+
+# if the person is at least 2 years old but less than 4, print a message that the person is a toddler
+elif 2 <= age < 4:
+    print("You're a toddler")
+
+# if the person is at least 4 years old but less than 13, print a message that the person is a kid
+elif 4 <= age < 13:
+    print("You're still a kid.")
+
+# if the person is at least 13 years old but less than 20, print a message that the person is a teenager
+elif 13 <= age < 20:
+    print("You're a teenager.")
+
+# if the person is at least 20 years old but less than 65, print a message that the person is an adult
+elif 20 <= age < 65:
+    print("You are an adult.")
+
+# if the person is age 65 or older, print a message tha the person is an elder.
+else:
+    print("You are an old man.")
+
+# make a list of your favorite fruits
+favorite_fruits = ["banana", "apple", "orange", "peach", "grape"]
+
+# write five statements. Each should check whether a certain kind of fruit is in your list
+if "banana" in favorite_fruits:
+    print("You really like bananas.")
+
+if "pears" in favorite_fruits:
+    print("You really like pearses.")
+
+if "peach" in favorite_fruits:
+    print("You really like peaches.")
+
+if "strawberry" in favorite_fruits:
+    print("You really like strawberries.")
+
+if "grape" in favorite_fruits:
+    print("You really like grapes")
+
+# make a list of five or more usernames, including the name 'admin'
+usernames = ["admin", "guest232", "guest332", "gues444", "guest223"]
+
+# loop through the list, and print a greeting to each user
+for username in usernames:
+
+# if the username is 'admin', print a special greeting
+    if username == "admin":
+        print("Hell admin, would you like to see a status report?")
+
+# otherwise, print a generic greeting
+    else:
+        print(f"Hello {username}, thank you for logging in again")
+
+# create a list with five usernames
+usernames = ["admin", "guest232", "guest332", "gues444", "guest223"]
+
+if usernames:
+    for username in usernames:
+        if username == "admin":
+            print("Hell admin, would you like to see a status report?")
+        else:
+            print(f"Hello {username}, thank you for logging in again")
+
+# if the list is empty, print the message "We need to find some users!"
+else:
+    print("We need to ind some users!")
+
+# make a lsit of five or more usernames called current_users
+current_users = ["admin", "guest232", "guest332", "gues444", "guest223"]
+
+# make a list of five usernames called new_users.
+current_users = [user.lower() for user in current_users]
+new_users = ["guest111", "guest232", "guest312", "gues444", "guest923"]
+
+# loop through the new_users list to see if each new username has already been used.
+for user in new_users:
+    if user.lower() in current_users:
+        print("You need to create another username.")
+    else:
+        print("Username created successfully.")
+
+# store the numbers 1 through 9 in a list
+numbers = [number for number in range(1, 10)]
+
+# loop through the list. You output should read "1st, 2nd, 3rd, 4th"
+for number in numbers:
+    if number == 1:
+        print(f"{number}st")
+    elif number == 2:
+        print(f"{number}nd")
+    elif number == 3:
+        print(f"{number}rd")
+    else:
+        print(f"{number}th")
+
+# usw a dictionary to store information about a person you know
+person = {"first_name": "Alex", "last_name": "Peterson", "city": "New York"}
+
+# print each piece of information stored in your dictionary
+for info in person:
+    print(person[info])
+
+# use a dictionary to store people's favorite numbers
+numbers = {"Alex": 3, "Viktoriia": 7, "Peter": 21, "Matha": 13, "Ben": 4}
+keys = numbers.keys()
+
+# print each person's name and their favorite number
+for key in keys:
+    print(f"{key}'s favorite number is {numbers[key]}.")
+
+# glossary of programming terms
+terms = {"dictionary": "A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries"
+                      " are written with curly brackets, and they have keys and values.",
+         "set": "A set is a collection which is unordered and unindexed. In Python sets are written with curly brackets",
+         "tuple": "A tuple is a collection which is ordered and unchangeable. In Python tuples are written "
+                 "with round brackets.",
+         "generator": "A Python generator is a function which returns a generator iterator (just an object we can "
+                       "iterate over) by calling yield . yield may be called with a value, in which case that value "
+                       "is treated as the 'generated' value",
+         "conditions": "Python uses boolean variables to evaluate conditions. The boolean values True and False are "
+                        "returned when an expression is compared or evaluated."}
+
+# print each word and its meaning as neatly formatted output
+print(f"\nDictionary: {terms['dictionary'.lower()]}\n")
+print(f"Set: {terms['set'.lower()]}\n")
+print(f"Tuple: {terms['tuple'.lower()]}\n")
+print(f"Generator: {terms['generator'.lower()]}\n")
+print(f"Conditions: {terms['conditions'.lower()]}\n")
+# glossary of programming terms
+terms = {"dictionary": "A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries"
+                      " are written with curly brackets, and they have keys and values.",
+         "set": "A set is a collection which is unordered and unindexed. In Python sets are written with curly brackets",
+         "tuple": "A tuple is a collection which is ordered and unchangeable. In Python tuples are written "
+                 "with round brackets.",
+         "generator": "A Python generator is a function which returns a generator iterator (just an object we can "
+                       "iterate over) by calling yield . yield may be called with a value, in which case that value "
+                       "is treated as the 'generated' value",
+         "conditions": "Python uses boolean variables to evaluate conditions. The boolean values True and False are "
+                        "returned when an expression is compared or evaluated."}
+
+
+# printing terms and their definitions.
+for key in terms.keys():
+    print(f"\n{key.title()}: {terms[key].lower()}")
+
+# make a dictionary containing three major rivers and country each river runs through
+rivers = {"Amazonka": "Brazil, Colombia, Peru",
+          "Don": "Russia",
+          "Volga": "Russia",
+          "Nile": "Egipt, Sudan, Uganda, Tanzania",
+          "Mississippi": "USA"}
+
+# use a loop to print a sentence about each river
+print('\n')
+for river, country in rivers.items():
+    print(f"The {river} runs through {country}")
+
+# use a loop to print the name of each river included in the dictionary
+print("\n")
+for river in rivers.keys():
+    print(f"{river}")
+
+# use a loop to print the name of each country included in the dictionary
+print("\n")
+for country in rivers.values():
+    print(f"{country}")
+
+
+peoples = [{"first_name": "Alex", "last_name": "Peterson", "city": "New York"},
+          {"first_name": "Mike", "last_name": "Miller", "city": "Oklahoma"},
+          {"first_name": "Bob", "last_name": "Foster", "city": "Miami"}]
+
+# used a loop to print keys and values from dictionaries from a list
+print("\nThe list of person i knew: ")
+for person in peoples:
+    # used generator and added keys to the list
+    keys = [key for key in person.keys()]
+
+    # used keys and printed values
+    print(f"- {person[keys[0]]} {person[keys[1]]} from {person[keys[2]]}")
+
+# make several dictionaries, where the name of each dictionary is the name of pet
+pets = [{"pet_name": "Teddy","kind_of_animal": "dog", "owner's_name": "Mike"},
+        {"pet_name": "Daisy","kind_of_animal": "dog", "owner's_name": "Steven"},
+        {"pet_name": "Max","kind_of_animal": "cat", "owner's_name": "Sara"}]
+
+# loop through list and print everything you know about each pet
+print("\nThe list of person i knew: ")
+for pet in pets:
+
+# use generator and add key to the list
+    keys = [key for key in pet.keys()]
+
+# use key and print value
+    print(f"- {pet[keys[0]]} is a {pet[keys[1]]} and owner of this {pet[keys[1]]} is {pet[keys[2]]}")
+
+# make a dictionary called favorite_places
+favorite_places = [{"Jessey": ["Grand Canyon", "Victoria Falls", "Angel Falls"]},
+                   {"Alex": ["Atelope Canyon", "Atacma Desert", "Arashiyame Bamboo Grove"]},
+                    {"Bob": ["Antarctica", "Avenue Of The Baobabs", "The Azores"]}]
+
+# loop  through the dictionary, and print each person's name and their favorite places
+for dictionary in favorite_places:
+    for key, value in dictionary.items():
+        places = "".join(place + ", " for place in value if place != value[-1])
+        print(f"{key}'s favorite places: {places} and {value[-1]}.")
+# favorite numbers
+numbers = {"Alex": [3, 4], "Viktoriia": [7, 9, 3], "Peter": [21, 13, 7], "Matha": [8, 9, 10], "Ben": [1, 2, 3, 4]}
+keys = numbers.keys()
+
+# use the key, print their values
+for key in keys:
+    favorite = "".join(str(num) + ", " for num in numbers[key] if num != numbers[key][-1])
+    print(f"{key}'s favorite number is {favorite}and {numbers[key][-1]}.")
+
+# make a dictionary called cities. Use the names of three cities as keys in your dictionary
+cities = [{"New York": {"country": "USA", "population": "8_623_000", "fact": "More than 800 languages are spken in New York City"}},
+          {"Moscow": {"country": "Russia", "population": "11_920_000",
+           "fact": "Moscow claims the largest number of billionaires in the world. Per Forbes, there are 84 billionaires in the city"}},
+          {"Paris": {"country": "France", "population": "2_148_000", "fact": "Paris was originally a Roman City called 'Lutetia."}}]
+
+# print the name of each city and all of the information you have stored about it
+for i in cities:
+    for city, info in i.items():
+        print(f"\nInteresting information about {city}")
+        print(f'\t- The {city} is a city in {info["country"]}.')
+        print(f'\t- Population of {city} is {info["population"]}.')
+        print(f'\t- Interesting fact about {city}: {info["fact"]}.')
+# write a program that asks the user what kid of rental cor they would like
+car = input("What your favorite car?: ")
+
+# if user uses only letters
+if car.isalpha():
+    print(f"Let me see if I can find you a {car}")
+    input("Press Enter to exit.")
+else:
+    print("Use only english alphabet. Try again")
+
+# write a program that asks the user how many people are in their dinner group
+places = input("How many seats do you want to book a table in a restaurant?: ")
+if int(places) > 8:
+    print("Excuse me but you need wait.")
+else:
+    print("The table is ready.")
+
+# ask the user for a number, and then report whether the number is a multiple of 10 or not
+number = input("Type a number: ")
+if int(number) % 10 == 0:
+    print("Your number is a multiple of 10")
+else:
+    print("You number is not a multiple of 10")
+
+# write a loop that prompts the user to enter a series of pizza toppings until they enter a "quit" value
+while True:
+    topping = []
+    print("\n*print 'quit' to exit.\n")
+    order = input("What toppings would you like to add to pizza?: ")
+    if order == "quit":
+        break
+    print(f"You'll add that topping to pizza.")
+
+# write a loop in which you ask users their age, and then tell them the cost of their mobei ticket
+while True:
+    age = int(input("Please tell me your age: "))
+    costs = 0
+    if age < 3:
+        print("Your ticket is free.")
+        break
+    elif 3 <= age < 12:
+        costs = 10
+        print(f"Your ticket costs {costs}$")
+        break
+    else:
+        costs = 15
+        print(f"Your ticket costs {costs}$")
+        break
+# write a lopp that never ends, and run it
+while True:
+    print("Hello world")
