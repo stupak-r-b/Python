@@ -1,5 +1,7 @@
 from typing import Iterable
 
+# in a given list the last element should become the first one. 
+#An empty list or list with only one element should stay the same
 
 def replace_last(items: list) -> Iterable:
     return [items[-1]] + items[:-1] if items else []
